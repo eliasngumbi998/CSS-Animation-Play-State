@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+ 
+<html>
+<head>
+ 
+<style type="text/css">
+ 
+div.animate {
+  width:50px;
+  height:50px;
+  color:white;
+  padding:2px;
+  background:blue;
+  position:relative;
+  animation:boxmove 5s infinite;
+  /* Firefox */
+  -moz-animation:boxmove 5s infinite;
+  /* Safari and Google Chrome */
+  -webkit-animation:boxmove 5s infinite;
+}
+ 
+#test1 {
+  animation-play-state:running;
+  /* Firefox */
+  -moz-animation-play-state:running;
+  /* Safari and Google Chrome */
+  -webkit-animation-play-state:running;
+}
+ 
+#test2 {
+  animation-play-state:paused;
+  /* Firefox */
+  -moz-animation-play-state:paused;
+  /* Safari and Google Chrome */
+  -webkit-animation-play-state:paused;
+}
+ 
+@keyframes boxmove
+{
+  from {left:0px;}
+  to {left:210px;}
+}
+ 
+@-moz-keyframes boxmove /* Firefox */
+{
+  from {left:0px;}
+  to {left:210px;}
+}
+ 
+@-webkit-keyframes boxmove /* Safari and Google Chrome */
+{
+  from {left:0px;}
+  to {left:210px;}
+}
+ 
+</style>
+ 
+</head>
+ 
+<body>
+ 
+<div id="test1" class="animate">running</div>
+<br />
+<div id="test2" class="animate">paused</div>
+ 
+</body>
+ 
+</html>
